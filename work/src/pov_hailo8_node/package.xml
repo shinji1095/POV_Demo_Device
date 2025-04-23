@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>pov_hailo8_node</name>
+  <version>0.0.1</version>
+  <description>Hailo-8 pov node for ROS 2</description>
+  <maintainer email="shinji1095nameko@gmail.com">ShinjiEto</maintainer>
+  <license>Apache-2.0</license>
+
+  <depend>rclcpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>cv_bridge</depend>
+  <depend>opencv2</depend>
+  <depend>pov_demo_msg</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

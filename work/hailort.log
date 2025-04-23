@@ -1,0 +1,515 @@
+[2025-04-23 15:18:45.226] [306586] [HailoRT] [info] [device.cpp:49] [Device] OS Version: Linux 6.8.0-1020-raspi #24-Ubuntu SMP PREEMPT_DYNAMIC Sun Feb 23 08:39:32 UTC 2025 aarch64
+[2025-04-23 15:18:45.230] [306586] [HailoRT] [info] [control.cpp:108] [control__parse_identify_results] firmware_version is: 4.20.0
+[2025-04-23 15:18:45.379] [306586] [HailoRT] [info] [internal_buffer_manager.cpp:202] [print_execution_results] Default Internal buffer planner failed to meet requirements
+[2025-04-23 15:18:45.379] [306586] [HailoRT] [info] [internal_buffer_manager.cpp:212] [print_execution_results] Default Internal buffer planner executed successfully
+[2025-04-23 15:18:45.406] [306586] [HailoRT] [info] [device_internal.cpp:57] [configure] Configuring HEF took 37.736482 milliseconds
+[2025-04-23 15:18:45.409] [306586] [HailoRT] [info] [edge_elements.cpp:52] [create] Created (HwWriteEl15resnet_v1_50/input_layer1 | hw_frame_size: 150528)
+[2025-04-23 15:18:45.410] [306586] [HailoRT] [info] [vstream.cpp:754] [InputVStreamImpl] Creating resnet_v1_50/input_layer1...
+[2025-04-23 15:18:45.410] [306586] [HailoRT] [info] [vstream_builder.cpp:102] [create_inputs] Input pipeline 'resnet_v1_50/input_layer1': (HwWriteEl15resnet_v1_50/input_layer1 | hw_frame_size: 150528) >> HW
+[2025-04-23 15:18:45.410] [306586] [HailoRT] [info] [edge_elements.cpp:287] [create] Created (HwReadEl12resnet_v1_50/softmax1 | hw_frame_size: 1000)
+[2025-04-23 15:18:45.411] [306586] [HailoRT] [info] [queue_elements.cpp:657] [create] Created (PullQEl_hw_read12resnet_v1_50/softmax1)
+[2025-04-23 15:18:45.411] [306586] [HailoRT] [info] [filter_elements.cpp:375] [create] Created (PostInferEl12resnet_v1_50/softmax1 | Quantization - src_type: UINT8, dst_type FLOAT32, limvals_min: 0, limvals_max: 1)
+[2025-04-23 15:18:45.412] [306586] [HailoRT] [info] [queue_elements.cpp:800] [create] Created (UserBuffQEl12resnet_v1_50/softmax1 | timeout: 10s)
+[2025-04-23 15:18:45.412] [306586] [HailoRT] [info] [vstream.cpp:1114] [OutputVStreamImpl] Creating resnet_v1_50/softmax1...
+[2025-04-23 15:18:45.413] [306586] [HailoRT] [info] [vstream_builder.cpp:220] [create_outputs] Output pipeline 'resnet_v1_50/softmax1': HW >> (HwReadEl12resnet_v1_50/softmax1 | hw_frame_size: 1000) >> (PullQEl_hw_read12resnet_v1_50/softmax1) >> (PostInferEl12resnet_v1_50/softmax1 | Quantization - src_type: UINT8, dst_type FLOAT32, limvals_min: 0, limvals_max: 1) >> (UserBuffQEl12resnet_v1_50/softmax1 | timeout: 10s)
+[2025-04-23 15:18:45.413] [306586] [HailoRT] [info] [core_op.cpp:156] [activate] Activating resnet_v1_50 took 0.196277 milliseconds. Note that the function is asynchronous and thus the network is not fully activated yet.
+[2025-04-23 15:18:45.414] [306586] [HailoRT] [info] [core_op.cpp:186] [deactivate] Deactivating took 0.462555 ms
+[2025-04-23 15:19:58.151] [306609] [HailoRT] [info] [queue_elements.cpp:855] [run_in_thread] Shutdown event was signaled in dequeue of UserBuffQEl12resnet_v1_50/softmax1!
+[2025-04-23 15:19:58.151] [306608] [HailoRT] [info] [queue_elements.cpp:734] [run_in_thread] Shutdown event was signaled in run_pull of queue element PullQEl_hw_read12resnet_v1_50/softmax1!
+[2025-04-23 15:19:58.151] [306608] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element PullQEl_hw_read12resnet_v1_50/softmax1 is not running anymore, exiting..
+[2025-04-23 15:19:58.151] [306586] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element PullQEl_hw_read12resnet_v1_50/softmax1 has 0 frames in his Queue on destruction
+[2025-04-23 15:19:58.151] [306609] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element UserBuffQEl12resnet_v1_50/softmax1 is not running anymore, exiting..
+[2025-04-23 15:19:58.151] [306586] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element UserBuffQEl12resnet_v1_50/softmax1 has 0 frames in his Queue on destruction
+[2025-04-23 15:20:38.301] [307004] [HailoRT] [info] [device.cpp:49] [Device] OS Version: Linux 6.8.0-1020-raspi #24-Ubuntu SMP PREEMPT_DYNAMIC Sun Feb 23 08:39:32 UTC 2025 aarch64
+[2025-04-23 15:20:38.304] [307004] [HailoRT] [info] [control.cpp:108] [control__parse_identify_results] firmware_version is: 4.20.0
+[2025-04-23 15:20:38.430] [307004] [HailoRT] [info] [internal_buffer_manager.cpp:202] [print_execution_results] Default Internal buffer planner failed to meet requirements
+[2025-04-23 15:20:38.430] [307004] [HailoRT] [info] [internal_buffer_manager.cpp:212] [print_execution_results] Default Internal buffer planner executed successfully
+[2025-04-23 15:20:38.456] [307004] [HailoRT] [info] [device_internal.cpp:57] [configure] Configuring HEF took 31.043915 milliseconds
+[2025-04-23 15:20:38.459] [307004] [HailoRT] [info] [edge_elements.cpp:52] [create] Created (HwWriteEl15resnet_v1_50/input_layer1 | hw_frame_size: 150528)
+[2025-04-23 15:20:38.459] [307004] [HailoRT] [info] [vstream.cpp:754] [InputVStreamImpl] Creating resnet_v1_50/input_layer1...
+[2025-04-23 15:20:38.459] [307004] [HailoRT] [info] [vstream_builder.cpp:102] [create_inputs] Input pipeline 'resnet_v1_50/input_layer1': (HwWriteEl15resnet_v1_50/input_layer1 | hw_frame_size: 150528) >> HW
+[2025-04-23 15:20:38.459] [307004] [HailoRT] [info] [edge_elements.cpp:287] [create] Created (HwReadEl12resnet_v1_50/softmax1 | hw_frame_size: 1000)
+[2025-04-23 15:20:38.459] [307004] [HailoRT] [info] [queue_elements.cpp:657] [create] Created (PullQEl_hw_read12resnet_v1_50/softmax1)
+[2025-04-23 15:20:38.459] [307004] [HailoRT] [info] [filter_elements.cpp:375] [create] Created (PostInferEl12resnet_v1_50/softmax1 | Quantization - src_type: UINT8, dst_type FLOAT32, limvals_min: 0, limvals_max: 1)
+[2025-04-23 15:20:38.459] [307004] [HailoRT] [info] [queue_elements.cpp:800] [create] Created (UserBuffQEl12resnet_v1_50/softmax1 | timeout: 10s)
+[2025-04-23 15:20:38.459] [307004] [HailoRT] [info] [vstream.cpp:1114] [OutputVStreamImpl] Creating resnet_v1_50/softmax1...
+[2025-04-23 15:20:38.459] [307004] [HailoRT] [info] [vstream_builder.cpp:220] [create_outputs] Output pipeline 'resnet_v1_50/softmax1': HW >> (HwReadEl12resnet_v1_50/softmax1 | hw_frame_size: 1000) >> (PullQEl_hw_read12resnet_v1_50/softmax1) >> (PostInferEl12resnet_v1_50/softmax1 | Quantization - src_type: UINT8, dst_type FLOAT32, limvals_min: 0, limvals_max: 1) >> (UserBuffQEl12resnet_v1_50/softmax1 | timeout: 10s)
+[2025-04-23 15:20:38.460] [307004] [HailoRT] [info] [core_op.cpp:156] [activate] Activating resnet_v1_50 took 0.216093 milliseconds. Note that the function is asynchronous and thus the network is not fully activated yet.
+[2025-04-23 15:20:38.461] [307004] [HailoRT] [info] [core_op.cpp:186] [deactivate] Deactivating took 0.496944 ms
+[2025-04-23 15:21:52.238] [307027] [HailoRT] [info] [queue_elements.cpp:855] [run_in_thread] Shutdown event was signaled in dequeue of UserBuffQEl12resnet_v1_50/softmax1!
+[2025-04-23 15:21:52.238] [307026] [HailoRT] [info] [queue_elements.cpp:734] [run_in_thread] Shutdown event was signaled in run_pull of queue element PullQEl_hw_read12resnet_v1_50/softmax1!
+[2025-04-23 15:21:52.238] [307026] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element PullQEl_hw_read12resnet_v1_50/softmax1 is not running anymore, exiting..
+[2025-04-23 15:21:52.238] [307004] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element PullQEl_hw_read12resnet_v1_50/softmax1 has 0 frames in his Queue on destruction
+[2025-04-23 15:21:52.238] [307027] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element UserBuffQEl12resnet_v1_50/softmax1 is not running anymore, exiting..
+[2025-04-23 15:21:52.238] [307004] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element UserBuffQEl12resnet_v1_50/softmax1 has 0 frames in his Queue on destruction
+[2025-04-23 15:22:45.144] [308522] [HailoRT] [info] [device.cpp:49] [Device] OS Version: Linux 6.8.0-1020-raspi #24-Ubuntu SMP PREEMPT_DYNAMIC Sun Feb 23 08:39:32 UTC 2025 aarch64
+[2025-04-23 15:22:45.147] [308522] [HailoRT] [info] [control.cpp:108] [control__parse_identify_results] firmware_version is: 4.20.0
+[2025-04-23 15:22:45.278] [308522] [HailoRT] [info] [internal_buffer_manager.cpp:202] [print_execution_results] Default Internal buffer planner failed to meet requirements
+[2025-04-23 15:22:45.278] [308522] [HailoRT] [info] [internal_buffer_manager.cpp:212] [print_execution_results] Default Internal buffer planner executed successfully
+[2025-04-23 15:22:45.305] [308522] [HailoRT] [info] [device_internal.cpp:57] [configure] Configuring HEF took 34.220593 milliseconds
+[2025-04-23 15:22:45.307] [308522] [HailoRT] [info] [edge_elements.cpp:52] [create] Created (HwWriteEl15resnet_v1_50/input_layer1 | hw_frame_size: 150528)
+[2025-04-23 15:22:45.307] [308522] [HailoRT] [info] [vstream.cpp:754] [InputVStreamImpl] Creating resnet_v1_50/input_layer1...
+[2025-04-23 15:22:45.307] [308522] [HailoRT] [info] [vstream_builder.cpp:102] [create_inputs] Input pipeline 'resnet_v1_50/input_layer1': (HwWriteEl15resnet_v1_50/input_layer1 | hw_frame_size: 150528) >> HW
+[2025-04-23 15:22:45.307] [308522] [HailoRT] [info] [edge_elements.cpp:287] [create] Created (HwReadEl12resnet_v1_50/softmax1 | hw_frame_size: 1000)
+[2025-04-23 15:22:45.307] [308522] [HailoRT] [info] [queue_elements.cpp:657] [create] Created (PullQEl_hw_read12resnet_v1_50/softmax1)
+[2025-04-23 15:22:45.307] [308522] [HailoRT] [info] [filter_elements.cpp:375] [create] Created (PostInferEl12resnet_v1_50/softmax1 | Quantization - src_type: UINT8, dst_type FLOAT32, limvals_min: 0, limvals_max: 1)
+[2025-04-23 15:22:45.308] [308522] [HailoRT] [info] [queue_elements.cpp:800] [create] Created (UserBuffQEl12resnet_v1_50/softmax1 | timeout: 10s)
+[2025-04-23 15:22:45.308] [308522] [HailoRT] [info] [vstream.cpp:1114] [OutputVStreamImpl] Creating resnet_v1_50/softmax1...
+[2025-04-23 15:22:45.308] [308522] [HailoRT] [info] [vstream_builder.cpp:220] [create_outputs] Output pipeline 'resnet_v1_50/softmax1': HW >> (HwReadEl12resnet_v1_50/softmax1 | hw_frame_size: 1000) >> (PullQEl_hw_read12resnet_v1_50/softmax1) >> (PostInferEl12resnet_v1_50/softmax1 | Quantization - src_type: UINT8, dst_type FLOAT32, limvals_min: 0, limvals_max: 1) >> (UserBuffQEl12resnet_v1_50/softmax1 | timeout: 10s)
+[2025-04-23 15:22:45.308] [308522] [HailoRT] [info] [core_op.cpp:156] [activate] Activating resnet_v1_50 took 0.194333 milliseconds. Note that the function is asynchronous and thus the network is not fully activated yet.
+[2025-04-23 15:22:45.309] [308522] [HailoRT] [info] [core_op.cpp:186] [deactivate] Deactivating took 0.473222 ms
+[2025-04-23 15:22:45.374] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:45.425] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:45.492] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:45.562] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:45.630] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:45.698] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:45.768] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:45.836] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:45.905] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:45.974] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:46.043] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:46.113] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:46.181] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:46.250] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:46.319] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:46.388] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:46.457] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:46.526] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:46.595] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:46.664] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:46.732] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:46.801] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:46.870] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:46.939] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:47.008] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:47.077] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:47.147] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:47.215] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:47.284] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:47.352] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:47.422] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:47.490] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:47.559] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:47.629] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:47.698] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:47.766] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:47.835] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:47.903] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:47.972] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:48.042] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:48.111] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:48.180] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:48.259] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:48.327] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:48.387] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:48.455] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:48.524] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:48.593] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:48.673] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:48.731] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:48.799] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:48.868] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:48.937] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:49.006] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:49.075] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:49.144] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:49.214] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:49.283] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:49.351] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:49.420] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:49.489] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:49.558] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:49.626] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:49.696] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:49.765] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:49.833] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:49.902] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:49.971] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:50.040] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:50.109] [308522] [HailoRT] [error] [vstream.cpp:767] [write] CHECK failed - Trying to write to vstream resnet_v1_50/input_layer1 before its network group is activated
+[2025-04-23 15:22:50.168] [308556] [HailoRT] [info] [queue_elements.cpp:855] [run_in_thread] Shutdown event was signaled in dequeue of UserBuffQEl12resnet_v1_50/softmax1!
+[2025-04-23 15:22:50.168] [308555] [HailoRT] [info] [queue_elements.cpp:734] [run_in_thread] Shutdown event was signaled in run_pull of queue element PullQEl_hw_read12resnet_v1_50/softmax1!
+[2025-04-23 15:22:50.169] [308555] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element PullQEl_hw_read12resnet_v1_50/softmax1 is not running anymore, exiting..
+[2025-04-23 15:22:50.169] [308522] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element PullQEl_hw_read12resnet_v1_50/softmax1 has 0 frames in his Queue on destruction
+[2025-04-23 15:22:50.169] [308556] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element UserBuffQEl12resnet_v1_50/softmax1 is not running anymore, exiting..
+[2025-04-23 15:22:50.169] [308522] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element UserBuffQEl12resnet_v1_50/softmax1 has 0 frames in his Queue on destruction
+[2025-04-23 15:30:50.757] [311446] [HailoRT] [info] [device.cpp:49] [Device] OS Version: Linux 6.8.0-1020-raspi #24-Ubuntu SMP PREEMPT_DYNAMIC Sun Feb 23 08:39:32 UTC 2025 aarch64
+[2025-04-23 15:30:50.760] [311446] [HailoRT] [info] [control.cpp:108] [control__parse_identify_results] firmware_version is: 4.20.0
+[2025-04-23 15:30:50.893] [311446] [HailoRT] [info] [internal_buffer_manager.cpp:202] [print_execution_results] Default Internal buffer planner failed to meet requirements
+[2025-04-23 15:30:50.893] [311446] [HailoRT] [info] [internal_buffer_manager.cpp:212] [print_execution_results] Default Internal buffer planner executed successfully
+[2025-04-23 15:30:50.919] [311446] [HailoRT] [info] [device_internal.cpp:57] [configure] Configuring HEF took 33.318181 milliseconds
+[2025-04-23 15:30:50.922] [311446] [HailoRT] [info] [edge_elements.cpp:52] [create] Created (HwWriteEl15resnet_v1_50/input_layer1 | hw_frame_size: 150528)
+[2025-04-23 15:30:50.922] [311446] [HailoRT] [info] [vstream.cpp:754] [InputVStreamImpl] Creating resnet_v1_50/input_layer1...
+[2025-04-23 15:30:50.922] [311446] [HailoRT] [info] [vstream_builder.cpp:102] [create_inputs] Input pipeline 'resnet_v1_50/input_layer1': (HwWriteEl15resnet_v1_50/input_layer1 | hw_frame_size: 150528) >> HW
+[2025-04-23 15:30:50.922] [311446] [HailoRT] [info] [edge_elements.cpp:287] [create] Created (HwReadEl12resnet_v1_50/softmax1 | hw_frame_size: 1000)
+[2025-04-23 15:30:50.922] [311446] [HailoRT] [info] [queue_elements.cpp:657] [create] Created (PullQEl_hw_read12resnet_v1_50/softmax1)
+[2025-04-23 15:30:50.922] [311446] [HailoRT] [info] [filter_elements.cpp:375] [create] Created (PostInferEl12resnet_v1_50/softmax1 | Quantization - src_type: UINT8, dst_type FLOAT32, limvals_min: 0, limvals_max: 1)
+[2025-04-23 15:30:50.922] [311446] [HailoRT] [info] [queue_elements.cpp:800] [create] Created (UserBuffQEl12resnet_v1_50/softmax1 | timeout: 10s)
+[2025-04-23 15:30:50.922] [311446] [HailoRT] [info] [vstream.cpp:1114] [OutputVStreamImpl] Creating resnet_v1_50/softmax1...
+[2025-04-23 15:30:50.923] [311446] [HailoRT] [info] [vstream_builder.cpp:220] [create_outputs] Output pipeline 'resnet_v1_50/softmax1': HW >> (HwReadEl12resnet_v1_50/softmax1 | hw_frame_size: 1000) >> (PullQEl_hw_read12resnet_v1_50/softmax1) >> (PostInferEl12resnet_v1_50/softmax1 | Quantization - src_type: UINT8, dst_type FLOAT32, limvals_min: 0, limvals_max: 1) >> (UserBuffQEl12resnet_v1_50/softmax1 | timeout: 10s)
+[2025-04-23 15:30:50.923] [311446] [HailoRT] [info] [core_op.cpp:156] [activate] Activating resnet_v1_50 took 0.190352 milliseconds. Note that the function is asynchronous and thus the network is not fully activated yet.
+[2025-04-23 15:31:02.110] [311446] [HailoRT] [info] [core_op.cpp:186] [deactivate] Deactivating took 0.454555 ms
+[2025-04-23 15:31:02.110] [311469] [HailoRT] [info] [queue_elements.cpp:855] [run_in_thread] Shutdown event was signaled in dequeue of UserBuffQEl12resnet_v1_50/softmax1!
+[2025-04-23 15:31:02.110] [311468] [HailoRT] [info] [queue_elements.cpp:734] [run_in_thread] Shutdown event was signaled in run_pull of queue element PullQEl_hw_read12resnet_v1_50/softmax1!
+[2025-04-23 15:31:02.110] [311468] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element PullQEl_hw_read12resnet_v1_50/softmax1 is not running anymore, exiting..
+[2025-04-23 15:31:02.110] [311446] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element PullQEl_hw_read12resnet_v1_50/softmax1 has 0 frames in his Queue on destruction
+[2025-04-23 15:31:02.110] [311469] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element UserBuffQEl12resnet_v1_50/softmax1 is not running anymore, exiting..
+[2025-04-23 15:31:02.110] [311446] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element UserBuffQEl12resnet_v1_50/softmax1 has 0 frames in his Queue on destruction
+[2025-04-23 15:32:04.935] [311970] [HailoRT] [info] [device.cpp:49] [Device] OS Version: Linux 6.8.0-1020-raspi #24-Ubuntu SMP PREEMPT_DYNAMIC Sun Feb 23 08:39:32 UTC 2025 aarch64
+[2025-04-23 15:32:04.938] [311970] [HailoRT] [info] [control.cpp:108] [control__parse_identify_results] firmware_version is: 4.20.0
+[2025-04-23 15:32:04.968] [311970] [HailoRT] [info] [buffer_requirements.cpp:195] [find_initial_desc_page_size] Using non-default initial_desc_page_size of 64, due to a small transfer size (8)
+[2025-04-23 15:32:04.968] [311970] [HailoRT] [info] [internal_buffer_manager.cpp:202] [print_execution_results] Default Internal buffer planner failed to meet requirements
+[2025-04-23 15:32:04.968] [311970] [HailoRT] [info] [internal_buffer_manager.cpp:212] [print_execution_results] Default Internal buffer planner executed successfully
+[2025-04-23 15:32:04.986] [311970] [HailoRT] [info] [device_internal.cpp:57] [configure] Configuring HEF took 23.929458 milliseconds
+[2025-04-23 15:32:04.987] [311970] [HailoRT] [info] [edge_elements.cpp:52] [create] Created (HwWriteEl1yolov8cls_rio_classification/input_layer1 | hw_frame_size: 1228800)
+[2025-04-23 15:32:04.987] [311970] [HailoRT] [info] [queue_elements.cpp:284] [create] Created (PushQEl1yolov8cls_rio_classification/input_layer1 | timeout: 10s)
+[2025-04-23 15:32:04.987] [311970] [HailoRT] [info] [filter_elements.cpp:101] [create] Created (PreInferEl1yolov8cls_rio_classification/input_layer1 | Reorder - src_order: NHWC, src_shape: (640, 640, 3), dst_order: NHCW, dst_shape: (640, 640, 3))
+[2025-04-23 15:32:04.987] [311970] [HailoRT] [info] [vstream.cpp:754] [InputVStreamImpl] Creating yolov8cls_rio_classification/input_layer1...
+[2025-04-23 15:32:04.987] [311970] [HailoRT] [info] [vstream_builder.cpp:102] [create_inputs] Input pipeline 'yolov8cls_rio_classification/input_layer1': (PreInferEl1yolov8cls_rio_classification/input_layer1 | Reorder - src_order: NHWC, src_shape: (640, 640, 3), dst_order: NHCW, dst_shape: (640, 640, 3)) >> (PushQEl1yolov8cls_rio_classification/input_layer1 | timeout: 10s) >> (HwWriteEl1yolov8cls_rio_classification/input_layer1 | hw_frame_size: 1228800) >> HW
+[2025-04-23 15:32:04.987] [311970] [HailoRT] [info] [edge_elements.cpp:287] [create] Created (HwReadEl0yolov8cls_rio_classification/softmax1 | hw_frame_size: 8)
+[2025-04-23 15:32:04.987] [311970] [HailoRT] [info] [queue_elements.cpp:657] [create] Created (PullQEl_hw_read0yolov8cls_rio_classification/softmax1)
+[2025-04-23 15:32:04.988] [311970] [HailoRT] [info] [filter_elements.cpp:375] [create] Created (PostInferEl0yolov8cls_rio_classification/softmax1 | Quantization - src_type: UINT8, dst_type FLOAT32, limvals_min: 0, limvals_max: 1)
+[2025-04-23 15:32:04.988] [311970] [HailoRT] [info] [queue_elements.cpp:800] [create] Created (UserBuffQEl0yolov8cls_rio_classification/softmax1 | timeout: 10s)
+[2025-04-23 15:32:04.988] [311970] [HailoRT] [info] [vstream.cpp:1114] [OutputVStreamImpl] Creating yolov8cls_rio_classification/softmax1...
+[2025-04-23 15:32:04.988] [311970] [HailoRT] [info] [vstream_builder.cpp:220] [create_outputs] Output pipeline 'yolov8cls_rio_classification/softmax1': HW >> (HwReadEl0yolov8cls_rio_classification/softmax1 | hw_frame_size: 8) >> (PullQEl_hw_read0yolov8cls_rio_classification/softmax1) >> (PostInferEl0yolov8cls_rio_classification/softmax1 | Quantization - src_type: UINT8, dst_type FLOAT32, limvals_min: 0, limvals_max: 1) >> (UserBuffQEl0yolov8cls_rio_classification/softmax1 | timeout: 10s)
+[2025-04-23 15:32:04.988] [311970] [HailoRT] [info] [core_op.cpp:156] [activate] Activating yolov8cls_rio_classification took 0.189685 milliseconds. Note that the function is asynchronous and thus the network is not fully activated yet.
+[2025-04-23 15:32:05.075] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:05.075] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.075] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.138] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:05.138] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.139] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.196] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:05.196] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.196] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.262] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:05.262] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.262] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.338] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:05.338] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.338] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.406] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:05.407] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.407] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.462] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:05.462] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.462] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.529] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:05.529] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.529] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.596] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:05.596] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.596] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.662] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:05.663] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.663] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.729] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:05.729] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.729] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.796] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:05.796] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.796] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.863] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:05.863] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.863] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.929] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:05.929] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.929] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.996] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:05.997] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:05.997] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.063] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:06.063] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.063] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.130] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:06.130] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.130] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.196] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:06.196] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.196] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.263] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:06.263] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.263] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.330] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:06.330] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.330] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.405] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:06.405] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.405] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.474] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:06.474] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.474] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.530] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:06.530] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.530] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.596] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:06.597] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.597] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.663] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:06.663] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.663] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.730] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:06.730] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.730] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.797] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:06.797] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.797] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.863] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:06.864] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.864] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.930] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:06.930] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.930] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.997] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:06.997] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:06.997] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:07.064] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:07.064] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:07.064] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:07.130] [311970] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 15:32:07.130] [311970] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:07.131] [311970] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 15:32:07.168] [311970] [HailoRT] [info] [core_op.cpp:186] [deactivate] Deactivating took 0.430038 ms
+[2025-04-23 15:32:07.168] [311994] [HailoRT] [info] [queue_elements.cpp:855] [run_in_thread] Shutdown event was signaled in dequeue of UserBuffQEl0yolov8cls_rio_classification/softmax1!
+[2025-04-23 15:32:07.168] [311993] [HailoRT] [info] [queue_elements.cpp:734] [run_in_thread] Shutdown event was signaled in run_pull of queue element PullQEl_hw_read0yolov8cls_rio_classification/softmax1!
+[2025-04-23 15:32:07.168] [311993] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element PullQEl_hw_read0yolov8cls_rio_classification/softmax1 is not running anymore, exiting..
+[2025-04-23 15:32:07.168] [311970] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element PullQEl_hw_read0yolov8cls_rio_classification/softmax1 has 0 frames in his Queue on destruction
+[2025-04-23 15:32:07.168] [311994] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element UserBuffQEl0yolov8cls_rio_classification/softmax1 is not running anymore, exiting..
+[2025-04-23 15:32:07.168] [311970] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element UserBuffQEl0yolov8cls_rio_classification/softmax1 has 0 frames in his Queue on destruction
+[2025-04-23 15:32:07.168] [311992] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element PushQEl1yolov8cls_rio_classification/input_layer1 is not running anymore, exiting..
+[2025-04-23 15:32:07.168] [311970] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element PushQEl1yolov8cls_rio_classification/input_layer1 has 0 frames in his Queue on destruction
+[2025-04-23 15:37:52.077] [313038] [HailoRT] [info] [device.cpp:49] [Device] OS Version: Linux 6.8.0-1020-raspi #24-Ubuntu SMP PREEMPT_DYNAMIC Sun Feb 23 08:39:32 UTC 2025 aarch64
+[2025-04-23 15:37:52.080] [313038] [HailoRT] [info] [control.cpp:108] [control__parse_identify_results] firmware_version is: 4.20.0
+[2025-04-23 15:37:52.108] [313038] [HailoRT] [info] [buffer_requirements.cpp:195] [find_initial_desc_page_size] Using non-default initial_desc_page_size of 64, due to a small transfer size (8)
+[2025-04-23 15:37:52.108] [313038] [HailoRT] [info] [internal_buffer_manager.cpp:202] [print_execution_results] Default Internal buffer planner failed to meet requirements
+[2025-04-23 15:37:52.108] [313038] [HailoRT] [info] [internal_buffer_manager.cpp:212] [print_execution_results] Default Internal buffer planner executed successfully
+[2025-04-23 15:37:52.126] [313038] [HailoRT] [info] [device_internal.cpp:57] [configure] Configuring HEF took 23.731593 milliseconds
+[2025-04-23 15:37:52.127] [313038] [HailoRT] [info] [edge_elements.cpp:52] [create] Created (HwWriteEl1yolov8cls_rio_classification/input_layer1 | hw_frame_size: 1228800)
+[2025-04-23 15:37:52.127] [313038] [HailoRT] [info] [queue_elements.cpp:284] [create] Created (PushQEl1yolov8cls_rio_classification/input_layer1 | timeout: 10s)
+[2025-04-23 15:37:52.127] [313038] [HailoRT] [info] [filter_elements.cpp:101] [create] Created (PreInferEl1yolov8cls_rio_classification/input_layer1 | Reorder - src_order: NHWC, src_shape: (640, 640, 3), dst_order: NHCW, dst_shape: (640, 640, 3))
+[2025-04-23 15:37:52.127] [313038] [HailoRT] [info] [vstream.cpp:754] [InputVStreamImpl] Creating yolov8cls_rio_classification/input_layer1...
+[2025-04-23 15:37:52.127] [313038] [HailoRT] [info] [vstream_builder.cpp:102] [create_inputs] Input pipeline 'yolov8cls_rio_classification/input_layer1': (PreInferEl1yolov8cls_rio_classification/input_layer1 | Reorder - src_order: NHWC, src_shape: (640, 640, 3), dst_order: NHCW, dst_shape: (640, 640, 3)) >> (PushQEl1yolov8cls_rio_classification/input_layer1 | timeout: 10s) >> (HwWriteEl1yolov8cls_rio_classification/input_layer1 | hw_frame_size: 1228800) >> HW
+[2025-04-23 15:37:52.128] [313038] [HailoRT] [info] [edge_elements.cpp:287] [create] Created (HwReadEl0yolov8cls_rio_classification/softmax1 | hw_frame_size: 8)
+[2025-04-23 15:37:52.128] [313038] [HailoRT] [info] [queue_elements.cpp:657] [create] Created (PullQEl_hw_read0yolov8cls_rio_classification/softmax1)
+[2025-04-23 15:37:52.128] [313038] [HailoRT] [info] [filter_elements.cpp:375] [create] Created (PostInferEl0yolov8cls_rio_classification/softmax1 | Quantization - src_type: UINT8, dst_type FLOAT32, limvals_min: 0, limvals_max: 1)
+[2025-04-23 15:37:52.128] [313038] [HailoRT] [info] [queue_elements.cpp:800] [create] Created (UserBuffQEl0yolov8cls_rio_classification/softmax1 | timeout: 10s)
+[2025-04-23 15:37:52.128] [313038] [HailoRT] [info] [vstream.cpp:1114] [OutputVStreamImpl] Creating yolov8cls_rio_classification/softmax1...
+[2025-04-23 15:37:52.128] [313038] [HailoRT] [info] [vstream_builder.cpp:220] [create_outputs] Output pipeline 'yolov8cls_rio_classification/softmax1': HW >> (HwReadEl0yolov8cls_rio_classification/softmax1 | hw_frame_size: 8) >> (PullQEl_hw_read0yolov8cls_rio_classification/softmax1) >> (PostInferEl0yolov8cls_rio_classification/softmax1 | Quantization - src_type: UINT8, dst_type FLOAT32, limvals_min: 0, limvals_max: 1) >> (UserBuffQEl0yolov8cls_rio_classification/softmax1 | timeout: 10s)
+[2025-04-23 15:37:52.128] [313038] [HailoRT] [info] [core_op.cpp:156] [activate] Activating yolov8cls_rio_classification took 0.207389 milliseconds. Note that the function is asynchronous and thus the network is not fully activated yet.
+[2025-04-23 15:37:57.249] [313038] [HailoRT] [info] [core_op.cpp:186] [deactivate] Deactivating took 0.452278 ms
+[2025-04-23 15:37:57.249] [313069] [HailoRT] [info] [queue_elements.cpp:855] [run_in_thread] Shutdown event was signaled in dequeue of UserBuffQEl0yolov8cls_rio_classification/softmax1!
+[2025-04-23 15:37:57.249] [313068] [HailoRT] [info] [queue_elements.cpp:734] [run_in_thread] Shutdown event was signaled in run_pull of queue element PullQEl_hw_read0yolov8cls_rio_classification/softmax1!
+[2025-04-23 15:37:57.249] [313068] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element PullQEl_hw_read0yolov8cls_rio_classification/softmax1 is not running anymore, exiting..
+[2025-04-23 15:37:57.249] [313038] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element PullQEl_hw_read0yolov8cls_rio_classification/softmax1 has 0 frames in his Queue on destruction
+[2025-04-23 15:37:57.249] [313069] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element UserBuffQEl0yolov8cls_rio_classification/softmax1 is not running anymore, exiting..
+[2025-04-23 15:37:57.249] [313038] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element UserBuffQEl0yolov8cls_rio_classification/softmax1 has 0 frames in his Queue on destruction
+[2025-04-23 15:37:57.249] [313067] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element PushQEl1yolov8cls_rio_classification/input_layer1 is not running anymore, exiting..
+[2025-04-23 15:37:57.249] [313038] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element PushQEl1yolov8cls_rio_classification/input_layer1 has 0 frames in his Queue on destruction
+[2025-04-23 15:40:51.978] [314779] [HailoRT] [info] [device.cpp:49] [Device] OS Version: Linux 6.8.0-1020-raspi #24-Ubuntu SMP PREEMPT_DYNAMIC Sun Feb 23 08:39:32 UTC 2025 aarch64
+[2025-04-23 15:40:51.981] [314779] [HailoRT] [info] [control.cpp:108] [control__parse_identify_results] firmware_version is: 4.20.0
+[2025-04-23 15:40:52.013] [314779] [HailoRT] [info] [buffer_requirements.cpp:195] [find_initial_desc_page_size] Using non-default initial_desc_page_size of 64, due to a small transfer size (8)
+[2025-04-23 15:40:52.013] [314779] [HailoRT] [info] [internal_buffer_manager.cpp:202] [print_execution_results] Default Internal buffer planner failed to meet requirements
+[2025-04-23 15:40:52.013] [314779] [HailoRT] [info] [internal_buffer_manager.cpp:212] [print_execution_results] Default Internal buffer planner executed successfully
+[2025-04-23 15:40:52.031] [314779] [HailoRT] [info] [device_internal.cpp:57] [configure] Configuring HEF took 25.556912 milliseconds
+[2025-04-23 15:40:52.031] [314779] [HailoRT] [info] [edge_elements.cpp:52] [create] Created (HwWriteEl1yolov8cls_rio_classification/input_layer1 | hw_frame_size: 1228800)
+[2025-04-23 15:40:52.032] [314779] [HailoRT] [info] [queue_elements.cpp:284] [create] Created (PushQEl1yolov8cls_rio_classification/input_layer1 | timeout: 10s)
+[2025-04-23 15:40:52.032] [314779] [HailoRT] [info] [filter_elements.cpp:101] [create] Created (PreInferEl1yolov8cls_rio_classification/input_layer1 | Reorder - src_order: NHWC, src_shape: (640, 640, 3), dst_order: NHCW, dst_shape: (640, 640, 3))
+[2025-04-23 15:40:52.032] [314779] [HailoRT] [info] [vstream.cpp:754] [InputVStreamImpl] Creating yolov8cls_rio_classification/input_layer1...
+[2025-04-23 15:40:52.032] [314779] [HailoRT] [info] [vstream_builder.cpp:102] [create_inputs] Input pipeline 'yolov8cls_rio_classification/input_layer1': (PreInferEl1yolov8cls_rio_classification/input_layer1 | Reorder - src_order: NHWC, src_shape: (640, 640, 3), dst_order: NHCW, dst_shape: (640, 640, 3)) >> (PushQEl1yolov8cls_rio_classification/input_layer1 | timeout: 10s) >> (HwWriteEl1yolov8cls_rio_classification/input_layer1 | hw_frame_size: 1228800) >> HW
+[2025-04-23 15:40:52.032] [314779] [HailoRT] [info] [edge_elements.cpp:287] [create] Created (HwReadEl0yolov8cls_rio_classification/softmax1 | hw_frame_size: 8)
+[2025-04-23 15:40:52.032] [314779] [HailoRT] [info] [queue_elements.cpp:657] [create] Created (PullQEl_hw_read0yolov8cls_rio_classification/softmax1)
+[2025-04-23 15:40:52.032] [314779] [HailoRT] [info] [filter_elements.cpp:375] [create] Created (PostInferEl0yolov8cls_rio_classification/softmax1 | Quantization - src_type: UINT8, dst_type FLOAT32, limvals_min: 0, limvals_max: 1)
+[2025-04-23 15:40:52.032] [314779] [HailoRT] [info] [queue_elements.cpp:800] [create] Created (UserBuffQEl0yolov8cls_rio_classification/softmax1 | timeout: 10s)
+[2025-04-23 15:40:52.032] [314779] [HailoRT] [info] [vstream.cpp:1114] [OutputVStreamImpl] Creating yolov8cls_rio_classification/softmax1...
+[2025-04-23 15:40:52.032] [314779] [HailoRT] [info] [vstream_builder.cpp:220] [create_outputs] Output pipeline 'yolov8cls_rio_classification/softmax1': HW >> (HwReadEl0yolov8cls_rio_classification/softmax1 | hw_frame_size: 8) >> (PullQEl_hw_read0yolov8cls_rio_classification/softmax1) >> (PostInferEl0yolov8cls_rio_classification/softmax1 | Quantization - src_type: UINT8, dst_type FLOAT32, limvals_min: 0, limvals_max: 1) >> (UserBuffQEl0yolov8cls_rio_classification/softmax1 | timeout: 10s)
+[2025-04-23 15:40:52.032] [314779] [HailoRT] [info] [core_op.cpp:156] [activate] Activating yolov8cls_rio_classification took 0.193 milliseconds. Note that the function is asynchronous and thus the network is not fully activated yet.
+[2025-04-23 15:53:19.847] [314779] [HailoRT] [info] [core_op.cpp:186] [deactivate] Deactivating took 0.449721 ms
+[2025-04-23 15:53:19.847] [314802] [HailoRT] [info] [queue_elements.cpp:734] [run_in_thread] Shutdown event was signaled in run_pull of queue element PullQEl_hw_read0yolov8cls_rio_classification/softmax1!
+[2025-04-23 15:53:19.847] [314803] [HailoRT] [info] [queue_elements.cpp:855] [run_in_thread] Shutdown event was signaled in dequeue of UserBuffQEl0yolov8cls_rio_classification/softmax1!
+[2025-04-23 15:53:19.848] [314802] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element PullQEl_hw_read0yolov8cls_rio_classification/softmax1 is not running anymore, exiting..
+[2025-04-23 15:53:19.848] [314779] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element PullQEl_hw_read0yolov8cls_rio_classification/softmax1 has 0 frames in his Queue on destruction
+[2025-04-23 15:53:19.848] [314803] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element UserBuffQEl0yolov8cls_rio_classification/softmax1 is not running anymore, exiting..
+[2025-04-23 15:53:19.848] [314779] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element UserBuffQEl0yolov8cls_rio_classification/softmax1 has 0 frames in his Queue on destruction
+[2025-04-23 15:53:19.848] [314801] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element PushQEl1yolov8cls_rio_classification/input_layer1 is not running anymore, exiting..
+[2025-04-23 15:53:19.848] [314779] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element PushQEl1yolov8cls_rio_classification/input_layer1 has 0 frames in his Queue on destruction
+[2025-04-23 16:07:36.759] [332310] [HailoRT] [info] [device.cpp:49] [Device] OS Version: Linux 6.8.0-1020-raspi #24-Ubuntu SMP PREEMPT_DYNAMIC Sun Feb 23 08:39:32 UTC 2025 aarch64
+[2025-04-23 16:07:36.762] [332310] [HailoRT] [info] [control.cpp:108] [control__parse_identify_results] firmware_version is: 4.20.0
+[2025-04-23 16:07:36.791] [332310] [HailoRT] [info] [buffer_requirements.cpp:195] [find_initial_desc_page_size] Using non-default initial_desc_page_size of 64, due to a small transfer size (8)
+[2025-04-23 16:07:36.791] [332310] [HailoRT] [info] [internal_buffer_manager.cpp:202] [print_execution_results] Default Internal buffer planner failed to meet requirements
+[2025-04-23 16:07:36.791] [332310] [HailoRT] [info] [internal_buffer_manager.cpp:212] [print_execution_results] Default Internal buffer planner executed successfully
+[2025-04-23 16:07:36.809] [332310] [HailoRT] [info] [device_internal.cpp:57] [configure] Configuring HEF took 23.539006 milliseconds
+[2025-04-23 16:07:36.809] [332310] [HailoRT] [info] [edge_elements.cpp:52] [create] Created (HwWriteEl1yolov8cls_rio_classification/input_layer1 | hw_frame_size: 1228800)
+[2025-04-23 16:07:36.810] [332310] [HailoRT] [info] [queue_elements.cpp:284] [create] Created (PushQEl1yolov8cls_rio_classification/input_layer1 | timeout: 10s)
+[2025-04-23 16:07:36.810] [332310] [HailoRT] [info] [filter_elements.cpp:101] [create] Created (PreInferEl1yolov8cls_rio_classification/input_layer1 | Reorder - src_order: NHWC, src_shape: (640, 640, 3), dst_order: NHCW, dst_shape: (640, 640, 3))
+[2025-04-23 16:07:36.810] [332310] [HailoRT] [info] [vstream.cpp:754] [InputVStreamImpl] Creating yolov8cls_rio_classification/input_layer1...
+[2025-04-23 16:07:36.810] [332310] [HailoRT] [info] [vstream_builder.cpp:102] [create_inputs] Input pipeline 'yolov8cls_rio_classification/input_layer1': (PreInferEl1yolov8cls_rio_classification/input_layer1 | Reorder - src_order: NHWC, src_shape: (640, 640, 3), dst_order: NHCW, dst_shape: (640, 640, 3)) >> (PushQEl1yolov8cls_rio_classification/input_layer1 | timeout: 10s) >> (HwWriteEl1yolov8cls_rio_classification/input_layer1 | hw_frame_size: 1228800) >> HW
+[2025-04-23 16:07:36.810] [332310] [HailoRT] [info] [edge_elements.cpp:287] [create] Created (HwReadEl0yolov8cls_rio_classification/softmax1 | hw_frame_size: 8)
+[2025-04-23 16:07:36.810] [332310] [HailoRT] [info] [queue_elements.cpp:657] [create] Created (PullQEl_hw_read0yolov8cls_rio_classification/softmax1)
+[2025-04-23 16:07:36.810] [332310] [HailoRT] [info] [filter_elements.cpp:375] [create] Created (PostInferEl0yolov8cls_rio_classification/softmax1 | Quantization - src_type: UINT8, dst_type FLOAT32, limvals_min: 0, limvals_max: 1)
+[2025-04-23 16:07:36.810] [332310] [HailoRT] [info] [queue_elements.cpp:800] [create] Created (UserBuffQEl0yolov8cls_rio_classification/softmax1 | timeout: 10s)
+[2025-04-23 16:07:36.810] [332310] [HailoRT] [info] [vstream.cpp:1114] [OutputVStreamImpl] Creating yolov8cls_rio_classification/softmax1...
+[2025-04-23 16:07:36.810] [332310] [HailoRT] [info] [vstream_builder.cpp:220] [create_outputs] Output pipeline 'yolov8cls_rio_classification/softmax1': HW >> (HwReadEl0yolov8cls_rio_classification/softmax1 | hw_frame_size: 8) >> (PullQEl_hw_read0yolov8cls_rio_classification/softmax1) >> (PostInferEl0yolov8cls_rio_classification/softmax1 | Quantization - src_type: UINT8, dst_type FLOAT32, limvals_min: 0, limvals_max: 1) >> (UserBuffQEl0yolov8cls_rio_classification/softmax1 | timeout: 10s)
+[2025-04-23 16:07:36.811] [332310] [HailoRT] [info] [core_op.cpp:156] [activate] Activating yolov8cls_rio_classification took 0.457907 milliseconds. Note that the function is asynchronous and thus the network is not fully activated yet.
+[2025-04-23 16:07:47.465] [332310] [HailoRT] [info] [core_op.cpp:186] [deactivate] Deactivating took 0.440112 ms
+[2025-04-23 16:07:47.465] [332334] [HailoRT] [info] [queue_elements.cpp:855] [run_in_thread] Shutdown event was signaled in dequeue of UserBuffQEl0yolov8cls_rio_classification/softmax1!
+[2025-04-23 16:07:47.465] [332333] [HailoRT] [info] [queue_elements.cpp:734] [run_in_thread] Shutdown event was signaled in run_pull of queue element PullQEl_hw_read0yolov8cls_rio_classification/softmax1!
+[2025-04-23 16:07:47.465] [332333] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element PullQEl_hw_read0yolov8cls_rio_classification/softmax1 is not running anymore, exiting..
+[2025-04-23 16:07:47.465] [332310] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element PullQEl_hw_read0yolov8cls_rio_classification/softmax1 has 0 frames in his Queue on destruction
+[2025-04-23 16:07:47.465] [332334] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element UserBuffQEl0yolov8cls_rio_classification/softmax1 is not running anymore, exiting..
+[2025-04-23 16:07:47.465] [332310] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element UserBuffQEl0yolov8cls_rio_classification/softmax1 has 0 frames in his Queue on destruction
+[2025-04-23 16:07:47.465] [332332] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element PushQEl1yolov8cls_rio_classification/input_layer1 is not running anymore, exiting..
+[2025-04-23 16:07:47.465] [332310] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element PushQEl1yolov8cls_rio_classification/input_layer1 has 0 frames in his Queue on destruction
+[2025-04-23 16:08:35.053] [332866] [HailoRT] [info] [device.cpp:49] [Device] OS Version: Linux 6.8.0-1020-raspi #24-Ubuntu SMP PREEMPT_DYNAMIC Sun Feb 23 08:39:32 UTC 2025 aarch64
+[2025-04-23 16:08:35.056] [332866] [HailoRT] [info] [control.cpp:108] [control__parse_identify_results] firmware_version is: 4.20.0
+[2025-04-23 16:08:35.088] [332866] [HailoRT] [info] [buffer_requirements.cpp:195] [find_initial_desc_page_size] Using non-default initial_desc_page_size of 64, due to a small transfer size (8)
+[2025-04-23 16:08:35.088] [332866] [HailoRT] [info] [internal_buffer_manager.cpp:202] [print_execution_results] Default Internal buffer planner failed to meet requirements
+[2025-04-23 16:08:35.088] [332866] [HailoRT] [info] [internal_buffer_manager.cpp:212] [print_execution_results] Default Internal buffer planner executed successfully
+[2025-04-23 16:08:35.106] [332866] [HailoRT] [info] [device_internal.cpp:57] [configure] Configuring HEF took 27.19999 milliseconds
+[2025-04-23 16:08:35.107] [332866] [HailoRT] [info] [edge_elements.cpp:52] [create] Created (HwWriteEl1yolov8cls_rio_classification/input_layer1 | hw_frame_size: 1228800)
+[2025-04-23 16:08:35.107] [332866] [HailoRT] [info] [queue_elements.cpp:284] [create] Created (PushQEl1yolov8cls_rio_classification/input_layer1 | timeout: 10s)
+[2025-04-23 16:08:35.107] [332866] [HailoRT] [info] [filter_elements.cpp:101] [create] Created (PreInferEl1yolov8cls_rio_classification/input_layer1 | Reorder - src_order: NHWC, src_shape: (640, 640, 3), dst_order: NHCW, dst_shape: (640, 640, 3))
+[2025-04-23 16:08:35.107] [332866] [HailoRT] [info] [vstream.cpp:754] [InputVStreamImpl] Creating yolov8cls_rio_classification/input_layer1...
+[2025-04-23 16:08:35.107] [332866] [HailoRT] [info] [vstream_builder.cpp:102] [create_inputs] Input pipeline 'yolov8cls_rio_classification/input_layer1': (PreInferEl1yolov8cls_rio_classification/input_layer1 | Reorder - src_order: NHWC, src_shape: (640, 640, 3), dst_order: NHCW, dst_shape: (640, 640, 3)) >> (PushQEl1yolov8cls_rio_classification/input_layer1 | timeout: 10s) >> (HwWriteEl1yolov8cls_rio_classification/input_layer1 | hw_frame_size: 1228800) >> HW
+[2025-04-23 16:08:35.107] [332866] [HailoRT] [info] [edge_elements.cpp:287] [create] Created (HwReadEl0yolov8cls_rio_classification/softmax1 | hw_frame_size: 8)
+[2025-04-23 16:08:35.107] [332866] [HailoRT] [info] [queue_elements.cpp:657] [create] Created (PullQEl_hw_read0yolov8cls_rio_classification/softmax1)
+[2025-04-23 16:08:35.107] [332866] [HailoRT] [info] [filter_elements.cpp:375] [create] Created (PostInferEl0yolov8cls_rio_classification/softmax1 | Quantization - src_type: UINT8, dst_type FLOAT32, limvals_min: 0, limvals_max: 1)
+[2025-04-23 16:08:35.107] [332866] [HailoRT] [info] [queue_elements.cpp:800] [create] Created (UserBuffQEl0yolov8cls_rio_classification/softmax1 | timeout: 10s)
+[2025-04-23 16:08:35.107] [332866] [HailoRT] [info] [vstream.cpp:1114] [OutputVStreamImpl] Creating yolov8cls_rio_classification/softmax1...
+[2025-04-23 16:08:35.107] [332866] [HailoRT] [info] [vstream_builder.cpp:220] [create_outputs] Output pipeline 'yolov8cls_rio_classification/softmax1': HW >> (HwReadEl0yolov8cls_rio_classification/softmax1 | hw_frame_size: 8) >> (PullQEl_hw_read0yolov8cls_rio_classification/softmax1) >> (PostInferEl0yolov8cls_rio_classification/softmax1 | Quantization - src_type: UINT8, dst_type FLOAT32, limvals_min: 0, limvals_max: 1) >> (UserBuffQEl0yolov8cls_rio_classification/softmax1 | timeout: 10s)
+[2025-04-23 16:08:35.108] [332866] [HailoRT] [info] [core_op.cpp:156] [activate] Activating yolov8cls_rio_classification took 0.194222 milliseconds. Note that the function is asynchronous and thus the network is not fully activated yet.
+[2025-04-23 16:08:35.170] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:35.170] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:35.170] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:35.223] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:35.223] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:35.223] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:35.290] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:35.290] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:35.290] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:35.356] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:35.357] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:35.357] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:35.423] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:35.423] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:35.423] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:35.490] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:35.490] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:35.490] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:35.566] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:35.566] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:35.566] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:35.633] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:35.633] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:35.633] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:35.690] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:35.690] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:35.691] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:35.766] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:35.766] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:35.766] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:35.823] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:35.823] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:35.823] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:35.890] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:35.890] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:35.890] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:35.957] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:35.957] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:35.957] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.024] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:36.024] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.024] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.090] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:36.091] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.091] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.157] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:36.157] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.157] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.233] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:36.233] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.233] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.300] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:36.300] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.300] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.357] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:36.357] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.357] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.424] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:36.424] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.424] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.491] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:36.491] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.491] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.567] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:36.567] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.567] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.624] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:36.624] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.624] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.691] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:36.691] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.691] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.757] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:36.758] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.758] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.835] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:36.835] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.835] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.891] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:36.891] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.891] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.958] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:36.958] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:36.958] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:37.025] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:37.025] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:37.025] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:37.091] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:37.091] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:37.091] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:37.158] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:37.158] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:37.158] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:37.224] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:37.224] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:37.224] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:37.291] [332866] [HailoRT] [error] [transform.cpp:1713] [transform] CHECK failed - src size must be 1228800. passed size - 150528
+[2025-04-23 16:08:37.292] [332866] [HailoRT] [error] [filter_elements.cpp:184] [action] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:37.292] [332866] [HailoRT] [error] [filter_elements.cpp:26] [run_push] CHECK_SUCCESS failed with status=HAILO_INVALID_ARGUMENT(2)
+[2025-04-23 16:08:37.337] [332866] [HailoRT] [info] [core_op.cpp:186] [deactivate] Deactivating took 0.432074 ms
+[2025-04-23 16:08:37.337] [332890] [HailoRT] [info] [queue_elements.cpp:855] [run_in_thread] Shutdown event was signaled in dequeue of UserBuffQEl0yolov8cls_rio_classification/softmax1!
+[2025-04-23 16:08:37.337] [332889] [HailoRT] [info] [queue_elements.cpp:734] [run_in_thread] Shutdown event was signaled in run_pull of queue element PullQEl_hw_read0yolov8cls_rio_classification/softmax1!
+[2025-04-23 16:08:37.337] [332889] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element PullQEl_hw_read0yolov8cls_rio_classification/softmax1 is not running anymore, exiting..
+[2025-04-23 16:08:37.337] [332866] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element PullQEl_hw_read0yolov8cls_rio_classification/softmax1 has 0 frames in his Queue on destruction
+[2025-04-23 16:08:37.338] [332890] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element UserBuffQEl0yolov8cls_rio_classification/softmax1 is not running anymore, exiting..
+[2025-04-23 16:08:37.338] [332866] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element UserBuffQEl0yolov8cls_rio_classification/softmax1 has 0 frames in his Queue on destruction
+[2025-04-23 16:08:37.338] [332888] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element PushQEl1yolov8cls_rio_classification/input_layer1 is not running anymore, exiting..
+[2025-04-23 16:08:37.338] [332866] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element PushQEl1yolov8cls_rio_classification/input_layer1 has 0 frames in his Queue on destruction
+[2025-04-23 16:09:19.525] [333362] [HailoRT] [info] [device.cpp:49] [Device] OS Version: Linux 6.8.0-1020-raspi #24-Ubuntu SMP PREEMPT_DYNAMIC Sun Feb 23 08:39:32 UTC 2025 aarch64
+[2025-04-23 16:09:19.529] [333362] [HailoRT] [info] [control.cpp:108] [control__parse_identify_results] firmware_version is: 4.20.0
+[2025-04-23 16:09:19.560] [333362] [HailoRT] [info] [buffer_requirements.cpp:195] [find_initial_desc_page_size] Using non-default initial_desc_page_size of 64, due to a small transfer size (8)
+[2025-04-23 16:09:19.560] [333362] [HailoRT] [info] [internal_buffer_manager.cpp:202] [print_execution_results] Default Internal buffer planner failed to meet requirements
+[2025-04-23 16:09:19.560] [333362] [HailoRT] [info] [internal_buffer_manager.cpp:212] [print_execution_results] Default Internal buffer planner executed successfully
+[2025-04-23 16:09:19.577] [333362] [HailoRT] [info] [device_internal.cpp:57] [configure] Configuring HEF took 24.847304 milliseconds
+[2025-04-23 16:09:19.579] [333362] [HailoRT] [info] [edge_elements.cpp:52] [create] Created (HwWriteEl1yolov8cls_rio_classification/input_layer1 | hw_frame_size: 1228800)
+[2025-04-23 16:09:19.579] [333362] [HailoRT] [info] [queue_elements.cpp:284] [create] Created (PushQEl1yolov8cls_rio_classification/input_layer1 | timeout: 10s)
+[2025-04-23 16:09:19.579] [333362] [HailoRT] [info] [filter_elements.cpp:101] [create] Created (PreInferEl1yolov8cls_rio_classification/input_layer1 | Reorder - src_order: NHWC, src_shape: (640, 640, 3), dst_order: NHCW, dst_shape: (640, 640, 3))
+[2025-04-23 16:09:19.579] [333362] [HailoRT] [info] [vstream.cpp:754] [InputVStreamImpl] Creating yolov8cls_rio_classification/input_layer1...
+[2025-04-23 16:09:19.579] [333362] [HailoRT] [info] [vstream_builder.cpp:102] [create_inputs] Input pipeline 'yolov8cls_rio_classification/input_layer1': (PreInferEl1yolov8cls_rio_classification/input_layer1 | Reorder - src_order: NHWC, src_shape: (640, 640, 3), dst_order: NHCW, dst_shape: (640, 640, 3)) >> (PushQEl1yolov8cls_rio_classification/input_layer1 | timeout: 10s) >> (HwWriteEl1yolov8cls_rio_classification/input_layer1 | hw_frame_size: 1228800) >> HW
+[2025-04-23 16:09:19.579] [333362] [HailoRT] [info] [edge_elements.cpp:287] [create] Created (HwReadEl0yolov8cls_rio_classification/softmax1 | hw_frame_size: 8)
+[2025-04-23 16:09:19.579] [333362] [HailoRT] [info] [queue_elements.cpp:657] [create] Created (PullQEl_hw_read0yolov8cls_rio_classification/softmax1)
+[2025-04-23 16:09:19.579] [333362] [HailoRT] [info] [filter_elements.cpp:375] [create] Created (PostInferEl0yolov8cls_rio_classification/softmax1 | Quantization - src_type: UINT8, dst_type FLOAT32, limvals_min: 0, limvals_max: 1)
+[2025-04-23 16:09:19.579] [333362] [HailoRT] [info] [queue_elements.cpp:800] [create] Created (UserBuffQEl0yolov8cls_rio_classification/softmax1 | timeout: 10s)
+[2025-04-23 16:09:19.579] [333362] [HailoRT] [info] [vstream.cpp:1114] [OutputVStreamImpl] Creating yolov8cls_rio_classification/softmax1...
+[2025-04-23 16:09:19.579] [333362] [HailoRT] [info] [vstream_builder.cpp:220] [create_outputs] Output pipeline 'yolov8cls_rio_classification/softmax1': HW >> (HwReadEl0yolov8cls_rio_classification/softmax1 | hw_frame_size: 8) >> (PullQEl_hw_read0yolov8cls_rio_classification/softmax1) >> (PostInferEl0yolov8cls_rio_classification/softmax1 | Quantization - src_type: UINT8, dst_type FLOAT32, limvals_min: 0, limvals_max: 1) >> (UserBuffQEl0yolov8cls_rio_classification/softmax1 | timeout: 10s)
+[2025-04-23 16:09:19.580] [333362] [HailoRT] [info] [core_op.cpp:156] [activate] Activating yolov8cls_rio_classification took 0.210408 milliseconds. Note that the function is asynchronous and thus the network is not fully activated yet.
+[2025-04-23 16:11:48.648] [333362] [HailoRT] [info] [core_op.cpp:186] [deactivate] Deactivating took 0.477389 ms
+[2025-04-23 16:11:48.648] [333386] [HailoRT] [info] [queue_elements.cpp:855] [run_in_thread] Shutdown event was signaled in dequeue of UserBuffQEl0yolov8cls_rio_classification/softmax1!
+[2025-04-23 16:11:48.648] [333385] [HailoRT] [info] [queue_elements.cpp:734] [run_in_thread] Shutdown event was signaled in run_pull of queue element PullQEl_hw_read0yolov8cls_rio_classification/softmax1!
+[2025-04-23 16:11:48.648] [333385] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element PullQEl_hw_read0yolov8cls_rio_classification/softmax1 is not running anymore, exiting..
+[2025-04-23 16:11:48.648] [333362] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element PullQEl_hw_read0yolov8cls_rio_classification/softmax1 has 0 frames in his Queue on destruction
+[2025-04-23 16:11:48.648] [333386] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element UserBuffQEl0yolov8cls_rio_classification/softmax1 is not running anymore, exiting..
+[2025-04-23 16:11:48.648] [333362] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element UserBuffQEl0yolov8cls_rio_classification/softmax1 has 0 frames in his Queue on destruction
+[2025-04-23 16:11:48.649] [333384] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element PushQEl1yolov8cls_rio_classification/input_layer1 is not running anymore, exiting..
+[2025-04-23 16:11:48.649] [333362] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element PushQEl1yolov8cls_rio_classification/input_layer1 has 0 frames in his Queue on destruction

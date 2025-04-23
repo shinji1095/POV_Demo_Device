@@ -1,0 +1,6 @@
+work/build
+work/install
+work/log
+
+work/src/realsense-ros
+work/src/unique_identifier_msgs
