@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>pov_bluetooth_central</name>
+  <version>0.0.1</version>
+  <description>ROS 2 package for Bluetooth central communication with XIAO nRF52840</description>
+  <maintainer email="shinji1095nameko@gmail.com">ShinjiEto</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+
+  <exec_depend>python3-bleak</exec_depend>
+  <exec_depend>bleak</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

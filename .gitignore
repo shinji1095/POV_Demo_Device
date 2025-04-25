@@ -1,6 +1,14 @@
 work/build
 work/install
 work/log
+work/venv
 
 work/src/realsense-ros
 work/src/unique_identifier_msgs
+
+.venv
+build
+install
+log
+
+hailort.log
