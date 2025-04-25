@@ -37,7 +37,7 @@
  class HailoClassifierNode : public rclcpp::Node {
  public:
      HailoClassifierNode() 
-         : Node("hailo_classifier_node"), 
+         : Node("pov_hailo8_node"), 
            device_(nullptr), 
            network_group_(nullptr) {
          // パラメータの宣言と取得
