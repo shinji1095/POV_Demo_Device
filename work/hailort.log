@@ -513,3 +513,30 @@
 [2025-04-23 16:11:48.648] [333362] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element UserBuffQEl0yolov8cls_rio_classification/softmax1 has 0 frames in his Queue on destruction
 [2025-04-23 16:11:48.649] [333384] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element PushQEl1yolov8cls_rio_classification/input_layer1 is not running anymore, exiting..
 [2025-04-23 16:11:48.649] [333362] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element PushQEl1yolov8cls_rio_classification/input_layer1 has 0 frames in his Queue on destruction
+[2025-04-23 16:37:06.465] [339616] [HailoRT] [info] [device.cpp:49] [Device] OS Version: Linux 6.8.0-1020-raspi #24-Ubuntu SMP PREEMPT_DYNAMIC Sun Feb 23 08:39:32 UTC 2025 aarch64
+[2025-04-23 16:37:06.467] [339616] [HailoRT] [info] [control.cpp:108] [control__parse_identify_results] firmware_version is: 4.20.0
+[2025-04-23 16:37:06.495] [339616] [HailoRT] [info] [buffer_requirements.cpp:195] [find_initial_desc_page_size] Using non-default initial_desc_page_size of 64, due to a small transfer size (8)
+[2025-04-23 16:37:06.495] [339616] [HailoRT] [info] [internal_buffer_manager.cpp:202] [print_execution_results] Default Internal buffer planner failed to meet requirements
+[2025-04-23 16:37:06.495] [339616] [HailoRT] [info] [internal_buffer_manager.cpp:212] [print_execution_results] Default Internal buffer planner executed successfully
+[2025-04-23 16:37:06.512] [339616] [HailoRT] [info] [device_internal.cpp:57] [configure] Configuring HEF took 22.473049 milliseconds
+[2025-04-23 16:37:06.512] [339616] [HailoRT] [info] [edge_elements.cpp:52] [create] Created (HwWriteEl1yolov8cls_rio_classification/input_layer1 | hw_frame_size: 1228800)
+[2025-04-23 16:37:06.513] [339616] [HailoRT] [info] [queue_elements.cpp:284] [create] Created (PushQEl1yolov8cls_rio_classification/input_layer1 | timeout: 10s)
+[2025-04-23 16:37:06.513] [339616] [HailoRT] [info] [filter_elements.cpp:101] [create] Created (PreInferEl1yolov8cls_rio_classification/input_layer1 | Reorder - src_order: NHWC, src_shape: (640, 640, 3), dst_order: NHCW, dst_shape: (640, 640, 3))
+[2025-04-23 16:37:06.513] [339616] [HailoRT] [info] [vstream.cpp:754] [InputVStreamImpl] Creating yolov8cls_rio_classification/input_layer1...
+[2025-04-23 16:37:06.513] [339616] [HailoRT] [info] [vstream_builder.cpp:102] [create_inputs] Input pipeline 'yolov8cls_rio_classification/input_layer1': (PreInferEl1yolov8cls_rio_classification/input_layer1 | Reorder - src_order: NHWC, src_shape: (640, 640, 3), dst_order: NHCW, dst_shape: (640, 640, 3)) >> (PushQEl1yolov8cls_rio_classification/input_layer1 | timeout: 10s) >> (HwWriteEl1yolov8cls_rio_classification/input_layer1 | hw_frame_size: 1228800) >> HW
+[2025-04-23 16:37:06.513] [339616] [HailoRT] [info] [edge_elements.cpp:287] [create] Created (HwReadEl0yolov8cls_rio_classification/softmax1 | hw_frame_size: 8)
+[2025-04-23 16:37:06.513] [339616] [HailoRT] [info] [queue_elements.cpp:657] [create] Created (PullQEl_hw_read0yolov8cls_rio_classification/softmax1)
+[2025-04-23 16:37:06.513] [339616] [HailoRT] [info] [filter_elements.cpp:375] [create] Created (PostInferEl0yolov8cls_rio_classification/softmax1 | Quantization - src_type: UINT8, dst_type FLOAT32, limvals_min: 0, limvals_max: 1)
+[2025-04-23 16:37:06.513] [339616] [HailoRT] [info] [queue_elements.cpp:800] [create] Created (UserBuffQEl0yolov8cls_rio_classification/softmax1 | timeout: 10s)
+[2025-04-23 16:37:06.513] [339616] [HailoRT] [info] [vstream.cpp:1114] [OutputVStreamImpl] Creating yolov8cls_rio_classification/softmax1...
+[2025-04-23 16:37:06.513] [339616] [HailoRT] [info] [vstream_builder.cpp:220] [create_outputs] Output pipeline 'yolov8cls_rio_classification/softmax1': HW >> (HwReadEl0yolov8cls_rio_classification/softmax1 | hw_frame_size: 8) >> (PullQEl_hw_read0yolov8cls_rio_classification/softmax1) >> (PostInferEl0yolov8cls_rio_classification/softmax1 | Quantization - src_type: UINT8, dst_type FLOAT32, limvals_min: 0, limvals_max: 1) >> (UserBuffQEl0yolov8cls_rio_classification/softmax1 | timeout: 10s)
+[2025-04-23 16:37:06.513] [339616] [HailoRT] [info] [core_op.cpp:156] [activate] Activating yolov8cls_rio_classification took 0.195055 milliseconds. Note that the function is asynchronous and thus the network is not fully activated yet.
+[2025-04-23 17:52:36.972] [339616] [HailoRT] [info] [core_op.cpp:186] [deactivate] Deactivating took 0.443095 ms
+[2025-04-23 17:52:36.972] [339640] [HailoRT] [info] [queue_elements.cpp:855] [run_in_thread] Shutdown event was signaled in dequeue of UserBuffQEl0yolov8cls_rio_classification/softmax1!
+[2025-04-23 17:52:36.972] [339639] [HailoRT] [info] [queue_elements.cpp:734] [run_in_thread] Shutdown event was signaled in run_pull of queue element PullQEl_hw_read0yolov8cls_rio_classification/softmax1!
+[2025-04-23 17:52:36.972] [339639] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element PullQEl_hw_read0yolov8cls_rio_classification/softmax1 is not running anymore, exiting..
+[2025-04-23 17:52:36.972] [339616] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element PullQEl_hw_read0yolov8cls_rio_classification/softmax1 has 0 frames in his Queue on destruction
+[2025-04-23 17:52:36.972] [339640] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element UserBuffQEl0yolov8cls_rio_classification/softmax1 is not running anymore, exiting..
+[2025-04-23 17:52:36.972] [339616] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element UserBuffQEl0yolov8cls_rio_classification/softmax1 has 0 frames in his Queue on destruction
+[2025-04-23 17:52:36.972] [339638] [HailoRT] [info] [queue_elements.cpp:68] [operator()] Thread in element PushQEl1yolov8cls_rio_classification/input_layer1 is not running anymore, exiting..
+[2025-04-23 17:52:36.972] [339616] [HailoRT] [info] [queue_elements.cpp:46] [~BaseQueueElement] Queue element PushQEl1yolov8cls_rio_classification/input_layer1 has 0 frames in his Queue on destruction
